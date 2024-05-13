@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share a File</title>
+<style>
+  /* Add border styling here */
+  form {
+    border: 1px solid #ccc; /* Example border style */
+    padding: 15px; /* Add padding for better spacing */
+  }
+</style>
+</head>
+<body>
+  <form action="/action_page.php" method="post" enctype="multipart/form-data">
+    <h2>Enter Name of your friend</h2>
+    <label for="fname">Friend's Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="Your friend's name..">
+    
+    <h2>Choose the file you want to post to your friend</h2>
+    <div style="display: flex; align-items: center;">
+      <input type="file" id="myFile" name="myFile" style="width: 100%; margin-right: 10px;">
+     
+    </div>
+    
+    <h2>What does the file contain?</h2>
+    <label>
+      <input type="checkbox" name="file_type[]" value="image"> Image
+    </label>
+    <label>
+      <input type="checkbox" name="file_type[]" value="source_code"> Source code
+    </label>
+    <label>
+      <input type="checkbox" name="file_type[]" value="binary_code"> Binary code
+    </label>
+  
+    <br>
+    <input type="submit" value="Submit Query">
+  </form>
+</body>
+</html>
